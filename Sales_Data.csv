@@ -1,15 +1,15 @@
 ﻿OrderID,Product,QuantityOrdered,PriceEach,OrderDate,PurchaseAddress
-176558,Bose SoundSport Headphones,1,99.99,04/19/19 08:46,917 1st St, Dallas, TX 75001
-176559,Google Phone,1,600,04/19/19 12:56,682 Chestnut St, Boston, MA 02215
-176560,Wired Headphones,1,11.99,04/19/19 13:28,669 Spruce St, Los Angeles, CA 90001
-176561,Macbook Pro Laptop,1,1700,04/20/19 14:38,333 8th St, Los Angeles, CA 90001
-176562,ThinkPad Laptop,1,999.99,04/20/19 16:20,1033 Main St, New York City, NY 10001
-176563,AAA Batteries (4-pack),2,2.99,04/21/19 09:15,44 River St, San Francisco, CA 94016
-176564,Google Phone,1,600,04/21/19 10:30,620 Broadway, New York City, NY 10001
-176565,USB-C Charging Cable,3,11.99,04/22/19 11:04,201 Pine St, Austin, TX 73301
-176566,Lightning Charging Cable,2,14.95,04/22/19 14:24,720 Elm St, Boston, MA 02215
-176567,AA Batteries (4-pack),3,3.84,04/23/19 09:17,14 Walnut St, Dallas, TX 75001
-176568,27in 4K Gaming Monitor,1,389.99,04/24/19 15:25,453 Maple St, Portland, OR 97035
-176569,Flatscreen TV,1,300,04/24/19 18:12,290 Cherry St, Seattle, WA 98101
-176570,LG Dryer,1,600,04/25/19 17:20,999 Ocean St, Miami, FL 33101
-176571,Google Phone,2,600,04/25/19 20:50,41 Main St, New York City, NY 10001
+176558,Bose SoundSport Headphones,1,99.99,04/19/19 08:46,917 1st St Dallas TX 75001
+176559,Google Phone,1,600,04/19/19 12:56,682 Chestnut St Boston MA 02215
+176560,Wired Headphones,1,11.99,04/19/19 13:28,669 Spruce St Los Angeles CA 90001
+176561,Macbook Pro Laptop,1,1700,04/20/19 14:38,333 8th St Los Angeles CA 90001
+176562,ThinkPad Laptop,1,999.99,04/20/19 16:20,1033 Main St New York City NY 10001
+176563,AAA Batteries (4-pack),2,2.99,04/21/19 09:15,44 River St San Francisco CA 94016
+176564,Google Phone,1,600,04/21/19 10:30,620 Broadway New York City NY 10001
+176565,USB-C Charging Cable,3,11.99,04/22/19 11:04,201 Pine St Austin TX 73301
+176566,Lightning Charging Cable,2,14.95,04/22/19 14:24,720 Elm St Boston MA 02215
+176567,AA Batteries (4-pack),3,3.84,04/23/19 09:17,14 Walnut St Dallas TX 75001
+176568,27in 4K Gaming Monitor,1,389.99,04/24/19 15:25,453 Maple St Portland OR 97035
+176569,Flatscreen TV,1,300,04/24/19 18:12,290 Cherry St Seattle WA 98101
+176570,LG Dryer,1,600,04/25/19 17:20,999 Ocean St Miami FL 33101
+176571,Google Phone,2,600,04/25/19 20:50,41 Main St New York City NY 10001
