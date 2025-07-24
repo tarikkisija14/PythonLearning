@@ -110,8 +110,25 @@ tk.Button(tab_analysis,text="Prikazi",command=ShowStats).pack(pady=40)
 
 #tab Merge
 
+textMerge = tk.Text(tab_Merge, wrap="none", width=100, height=20)
+textMerge.pack(pady=10)
+
+def Merge():
+    try:
+      df_sales=pd.read_csv(Sales)
+      df_customers=pd.read_csv(Customers)
+
+      merged_df=pd.merge(df_sales,df_customers,how='inner',on='CustomerID')
+
+      textMerge.delete('1.0',tk.END)
+      textMerge.insert(tk.END,merged_df.head(10).to_string(index=False))
+    except Exception as e:
+        messagebox.showerror("Greska",f"{e}")
 
 
+
+
+tk.Button(tab_Merge,text="Spoji",command=Merge).pack(pady=40)
 
 
 program.mainloop()
