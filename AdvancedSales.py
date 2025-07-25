@@ -22,7 +22,11 @@ notebook.add(tab_duplicates, text='Ciscenje Duplikata ')
 tab_nans=tk.Frame(notebook)
 notebook.add(tab_nans, text='Ciscenje praznih vrijednosti ')
 
+tab_format=tk.Frame(notebook)
+notebook.add(tab_format, text='Format podataka u tipove ')
 
+tab_CleanedCsv=tk.Frame(notebook)
+notebook.add(tab_CleanedCsv, text='Prikazanje ociscenog CSV ')
 
 textOutput = tk.Text(tab_loading, wrap="none", width=80, height=20)
 textOutput.pack(pady=10)
@@ -71,15 +75,54 @@ def CleanNans():
             df.loc[i, 'OrderID'] = maxid
 
     df['QuantityOrdered']=df['QuantityOrdered'].fillna(df['QuantityOrdered'].mean())
+    df['OrderDate'] = pd.to_datetime(df['OrderDate'], errors='coerce')
+    df['OrderDate'] = df['OrderDate'].fillna(pd.Timestamp('2025-01-01'))
 
-    df.to_csv("SalesCleaned1",index=False)
+    df.to_csv(r"C:\Users\tarik\Desktop\pocetnicki koraci\SalesCleaned3.csv",index=False)
 
 
 
 tk.Button(tab_nans,text="Ocisti Nulte vrijednosti",command=CleanNans).pack(pady=40)
 
 
+csvCleaned1=r"C:\Users\tarik\Desktop\pocetnicki koraci\SalesCleaned1.csv"
 
+
+def FormatData():
+    df = pd.read_csv(csvCleaned1, on_bad_lines='skip', engine='python')
+    df['PriceEach'] = df['PriceEach'].replace(r'[\$,]', '', regex=True).astype(float)
+    df['QuantityOrdered'] = df['QuantityOrdered'].astype(int)
+    df['OrderDate']=pd.to_datetime(df['OrderDate'],errors='coerce')
+
+    df.to_csv(r"C:\Users\tarik\Desktop\pocetnicki koraci\SalesCleaned4.csv",index=False)
+
+
+
+
+
+tk.Button(tab_format,text="Formatiraj Podatke",command=FormatData).pack(pady=40)
+
+
+
+
+textOutput1 = tk.Text(tab_CleanedCsv, wrap="none", width=80, height=20)
+textOutput1.pack(pady=10)
+
+Path=r"C:\Users\tarik\Desktop\pocetnicki koraci\SalesCleaned4.csv"
+
+
+def LoadData1():
+    try:
+      df = pd.read_csv(Path, on_bad_lines='skip', engine='python')
+
+      textOutput1.delete('1.0',tk.END)
+      tekst = df.to_string(index=False)
+      textOutput1.insert(tk.END, tekst)
+    except Exception as e:
+        messagebox.showerror("Greska",f"{e}")
+
+
+tk.Button(tab_CleanedCsv,text="Ucitaj Podatke",command=LoadData1).pack(pady=40)
 
 
 program.mainloop()
