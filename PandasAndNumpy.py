@@ -73,8 +73,32 @@ def AnalyzeData(df):
     print(f"Prosjecna ocjena: {mean_grade:.2f}")
     print(f"Standardna devijacija sati ucenja: {std_study:.2f}")
     print(f"Standardna devijacija prosjecnih ocjena {std_grade:.2f}")
-    print(f"Korelacija između sati učenja i prosječne ocjene: {correl:.2f}")
+    print(f"Korelacija između sati učenja i prosječne ocjene: {correl:.2f}\n\n")
+
+
+def MoreAnalysis(df):
+    if df is None:
+        print("Nema podataka za analizu")
+        return
+
+    if "StudyHours" not in df.columns:
+        print("Podaci nisu oceisceni,nema te kolone")
+        return
+
+    def f(x):
+        return x**2+2*x+1
+
+    f_vect=np.vectorize(f)
+
+    study_hours=df["StudyHours"].to_numpy()
+
+    rez=f_vect(study_hours)
+
+    print("Rezultat funkcije f(x)  za vrijednosti iz study hours:")
+    print(rez)
+
 
 df=LoadData()
 df=CleanData(df)
 AnalyzeData(df)
+MoreAnalysis(df)
