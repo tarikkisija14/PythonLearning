@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.metrics import accuracy_score
 
-csvPath=r"C:\Users\tarik\Desktop\pocetnicki koraci\College.csv"
+csvPath=r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\College.csv"
 
 def LoadData():
     try:
@@ -42,7 +42,7 @@ def CleanData(df):
 
     print("Ocisceni podaci:\n")
     print(df.head(10))
-    df.to_csv(r"C:\Users\tarik\Desktop\pocetnicki koraci\College_Cleaned.csv", index=False)
+    df.to_csv(r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\College_Cleaned.csv", index=False)
     return df
 
 dfCleaned=CleanData(df)

@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error,r2_score
 
 
-csvPath=r"C:\Users\tarik\Desktop\pocetnicki koraci\HousePrices.csv"
+csvPath=r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\HousePrices.csv"
 
 def LoadData():
     try:
@@ -30,7 +30,7 @@ def CleanData(df):
         if df[c].isnull().sum() > 0:
             avg=df[c].mean()
             df[c].fillna(avg, inplace=True)
-    df.to_csv(r"C:\Users\tarik\Desktop\pocetnicki koraci\HousePrices_Cleaned.csv", index=False)
+    df.to_csv(r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\HousePrices_Cleaned.csv", index=False)
     return df
 
 
