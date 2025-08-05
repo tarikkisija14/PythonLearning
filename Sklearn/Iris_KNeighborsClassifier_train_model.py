@@ -2,7 +2,7 @@ from sklearn.datasets import load_iris
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
-
+import joblib
 
 def LoadIris():
     iris=load_iris()
@@ -28,3 +28,6 @@ X,y=LoadIris()
 X_train, X_test, y_train, y_test = SplitIris(X,y)
 model = model_training(X_train,y_train,k=3)
 EvaluateModel(model,X_test,y_test)
+
+joblib.dump(model,r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\IKNCTM.pkl")
+

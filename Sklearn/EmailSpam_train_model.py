@@ -58,3 +58,5 @@ X,y,vectorizer=PrepareData(df)
 X_train, X_test, y_train, y_test = SplitData(X, y)
 model = TrainModel(X_train, y_train)
 EvaluateModel(model, X_test, y_test)
+
+joblib.dump(model,r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\ESTM.pkl")

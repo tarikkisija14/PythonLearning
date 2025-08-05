@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
+import joblib
 
 csvPath=r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\College_Cleaned.csv"
 
@@ -33,3 +34,4 @@ def EvaluateModel(model,X_test,y_test):
 model=model_training(X_train,y_train,100)
 EvaluateModel(model,X_test,y_test)
 
+joblib.dump(model,r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\CRFTM.pkl")

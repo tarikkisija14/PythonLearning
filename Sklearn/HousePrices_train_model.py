@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error,r2_score
+import joblib
 
 
 csvPath=r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\HousePrices.csv"
@@ -67,3 +68,6 @@ X, y = PrepareData(df)
 X_train, X_test, y_train, y_test = SplitData(X, y)
 model = model_training(X_train, y_train)
 EvaluateModel(model, X_test, y_test)
+
+joblib.dump(model,r"C:\Users\tarik\Desktop\pocetnicki koraci\Sklearn\HSTM.pkl")
+
