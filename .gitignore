@@ -24,3 +24,4 @@ Thumbs.db
 .mypy_cache/
 *.code-workspace
 *.csv
+*pkl
